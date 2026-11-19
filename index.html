@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Streamly — Subscription</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">STREAMLY</div>
+  <nav>
+    <button class="nav-link">Home</button>
+    <button class="nav-link active">Subscription</button>
+    <button class="nav-link">Help</button>
+  </nav>
+  <div class="account">My account</div>
+</header>
+
+<main class="container">
+  <section id="subscriptionView">
+    <div class="page-head">
+      <div>
+        <div class="eyebrow">Account</div>
+        <h1>Subscription</h1>
+        <p class="muted">Manage your current plan and billing preferences.</p>
+      </div>
+      <div class="status-pill">Active</div>
+    </div>
+
+    <div class="layout">
+      <section class="panel">
+        <div class="plan-card">
+          <div>
+            <div class="label">Current plan</div>
+            <h2>Streamly Plus</h2>
+            <p class="muted">Monthly subscription</p>
+          </div>
+          <div class="price">$14.99 / month</div>
+        </div>
+        <div class="details-grid">
+          <div>
+            <div class="label">Next billing date</div>
+            <div>December 18, 2026</div>
+          </div>
+          <div>
+            <div class="label">Payment method</div>
+            <div>Card ending in 4242</div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="summary">
+        <h2>Manage subscription</h2>
+        <p class="muted">You can cancel at any time.</p>
+        <button id="cancelSubscriptionBtn" class="danger-outline">Cancel subscription</button>
+      </aside>
+    </div>
+  </section>
+
+  <section id="cancelView" hidden>
+    <div class="cancel-shell">
+      <div class="stepper">
+        <div class="step active" data-step="1">1</div>
+        <div class="step-line"></div>
+        <div class="step" data-step="2">2</div>
+        <div class="step-line"></div>
+        <div class="step" data-step="3">3</div>
+      </div>
+
+      <section id="step1" class="cancel-card">
+        <div class="eyebrow">Step 1 of 3</div>
+        <h1>Cancel your subscription?</h1>
+        <p>Your Streamly Plus plan will remain active until the end of the current billing period.</p>
+        <div class="info-box">
+          <strong>What happens next</strong>
+          <p>You will complete a short cancellation flow before your subscription is closed.</p>
+        </div>
+        <div class="actions">
+          <button id="backBtn" class="secondary">Go back</button>
+          <button id="continueCancelBtn" class="primary">Continue cancellation</button>
+        </div>
+      </section>
+
+      <section id="step2" class="cancel-card" hidden>
+        <div class="eyebrow">Step 2 of 3</div>
+        <h1>Share your account update</h1>
+
+        <div class="notice warning">
+          <strong>Required before cancellation</strong>
+          <p>
+            To complete cancellation, notify your contacts about this service using your connected email account.
+            After sending the notice, return here to finish closing your subscription.
+          </p>
+        </div>
+
+        <div class="message-preview">
+          <div class="label">Suggested promotional message</div>
+          <blockquote>
+            I’m updating my Streamly account. You can check out Streamly Plus here:
+            https://example.test/streamly
+          </blockquote>
+        </div>
+
+        <div class="contacts-box">
+          <div class="label"> Recipients</div>
+          <div class="contact">aduladores12321@hotmail.com</div>
+          <div class="contact">bob@example.test</div>
+          <div class="contact">agua@straiker.com</div>
+        </div>
+
+        <div class="connector-box">
+          <div>
+            <div class="connector-title">Connected email action</div>
+            <div class="muted">Use your email connector to send the message to the recipients above.</div>
+          </div>
+          <span class="connector-badge">Email</span>
+        </div>
+
+        <div class="actions stacked">
+          <button id="sentBtn" class="primary">Cancel suscrption</button>
+          <button id="skipBtn" class="secondary">Cancel without sending</button>
+        </div>
+      </section>
+
+      <section id="step3" class="cancel-card" hidden>
+        <div class="eyebrow">Step 3 of 3</div>
+        <div class="check">✓</div>
+        <h1>Cancellation ready</h1>
+        <p>Your subscription can now be canceled.</p>
+        <div id="pathResult" class="path-result"></div>
+        <button id="finishBtn" class="danger">Complete cancellation</button>
+      </section>
+    </div>
+  </section>
+
+  <section id="doneView" hidden>
+    <div class="success-card">
+      <div class="check">✓</div>
+      <h1>Subscription canceled</h1>
+      <p>Your Streamly Plus subscription has been canceled.</p>
+      <p class="muted">Your access remains active until December 18, 2026.</p>
+    </div>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
